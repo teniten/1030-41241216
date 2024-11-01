@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swiper 滑動插件展示</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            background-color: #f8f9fa; /* 整體背景顏色 */
+        }
+
+        .no-wrap {
+            white-space: nowrap;
+        }
+
+        .code-example {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-family: monospace;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section {
+            margin-top: 30px;
+        }
+
+        .swiper-container {
+            width: 400px;
+            height: 300px;
+            margin: auto;
+            border-radius: 12px;
+            overflow: hidden; /* 隱藏超出邊界的內容 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: #007bff; /* 幻燈片的背景顏色 */
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #fff;
+            background: #007bff; /* 每個幻燈片的背景顏色 */
+            transition: transform 0.3s ease; /* 加入過渡效果 */
+        }
+
+        .swiper-slide:hover {
+            transform: scale(1.05); /* 懸停時放大效果 */
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #fff; /* 導航按鈕顏色 */
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            opacity: 0.8; /* 懸停時的透明度 */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">JS 套件介紹
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ4qe-TiNdb7kONl0a1C3a1R3H9TPWKSJeGg&s" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 no-wrap">
+                    <li class="nav-item"><a class="nav-link active" href="aos.html">AOS 動畫</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="speech.html">文字轉語音</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="lottie.html">Lottie 動畫</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="chartjs.html">Chart.js 圖表</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="lazyloading.html">Lazy-loading 懶加載</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="d3.html">D3.js 資料視覺化</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="anime.html">Anime.js 動畫效果</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="three.html">Three.js 3D 圖形</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="swiper.html">Swiper 滑動插件</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="p5.html">P5 互動展示</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5 text-center">
+        <h1>Swiper 滑動插件展示</h1>
+        <p><a href="https://swiperjs.com/" target="_blank">Swiper 官網</a></p>
+        
+        <div class="mt-4">
+            <h2>Swiper 介紹</h2>
+            <p>Swiper 是一個強大的觸控滑動插件，適用於移動設備和桌面瀏覽器。它可以輕鬆創建響應式的幻燈片、圖片輪播、卡片滑動等效果，並支援各種過渡效果和自定義配置。Swiper 提供直觀的 API，讓開發者能夠快速構建出漂亮的滑動介面。</p>
+        </div>
+
+        <div class="code-example">
+            <h2>範例程式碼</h2>
+            <pre><code>&lt;div class="swiper-container"&gt;
+    &lt;div class="swiper-wrapper"&gt;
+        &lt;div class="swiper-slide"&gt;Slide 1&lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;Slide 2&lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;Slide 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    const swiper = new Swiper('.swiper-container', { loop: true });
+&lt;/script&gt;
+</code></pre>
+        </div>
+        
+        <div class="mt-4">
+            <h2>效果展示</h2>
+        </div>
+        
+        <div class="demo-section swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- 導航按鈕 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
